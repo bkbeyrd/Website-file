@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Services</title>
+<title>About Us - TrustEdge Infotech</title>
 
 <style>
 *{
@@ -21,10 +21,9 @@ body{
   min-height:100vh;
   display:flex;
   flex-direction:column;
-  background:#0f3358;
-  color:white;
+  background:#f4f6fb;
+  color:#0c2b5a;
 }
-
 /* HEADER */
 .topbar{
   background:#ffffff;
@@ -146,64 +145,89 @@ body{
   }
 }
 
-/* SERVICES */
-.services-section{
-  flex:1;
+/* PAGE TITLE */
+.page-title{
+  background:#0f2d52;
+  color:white;
   text-align:center;
-  background:#0f3358;
-  padding:40px 20px;
+  padding:35px 15px;
 }
 
-.services-section h2{
-  font-size:28px;
-  margin-bottom:10px;
+.page-title h1{
+  font-size:34px;
+}
+
+/* ABOUT */
+.about-section{
+  flex:1;
+  padding:40px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.about-section h1{
+  text-align:center;
+  color:#0f2d52;
 }
 
 .underline{
   width:80px;
   height:4px;
   background:#ffc107;
-  margin:0 auto 30px;
+  margin:10px auto 30px;
   border-radius:10px;
 }
 
-.services-grid{
+.about-content{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
-  gap:20px;
-  max-width:1100px;
-  margin:auto;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
 }
 
-.service-card{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  text-align:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-  transition:0.3s;
-  text-decoration:none;
-  display:block;
+.about-text{
+  font-size:15px;
+  color:#333;
+  line-height:1.6;
 }
 
-.service-card:hover{
-  transform:translateY(-5px);
-}
-
-.service-card img{
-  width:50px;
+.about-text h2{
+  color:#0f2d52;
   margin-bottom:10px;
 }
 
-.service-card h3{
-  margin:10px 0;
-  font-size:16px;
-  color:#0f2d52;
+.about-text p{
+  margin-bottom:14px;
 }
 
-.service-card p{
-  font-size:13px;
-  color:#555;
+.about-img img{
+  width:100%;
+  border-radius:12px;
+}
+
+/* FEATURES */
+.features{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+}
+
+.feature-box{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feature-box h3{
+  color:#0f2d52;
+  margin-bottom:8px;
+}
+
+.feature-box p{
+  color:#333;
 }
 
 /* FOOTER */
@@ -240,6 +264,12 @@ body{
 }
 
 /* MOBILE */
+@media(max-width:768px){
+  .about-content{
+    grid-template-columns:1fr;
+  }
+}
+
 @media(max-width:600px){
   .topbar{
     align-items:flex-start;
@@ -258,8 +288,12 @@ body{
     font-size:0.75rem;
   }
 
-  .services-section{
-    padding:35px 14px;
+  .page-title{
+    padding:25px 10px;
+  }
+
+  .page-title h1{
+    font-size:28px;
   }
 }
 </style>
@@ -282,87 +316,75 @@ body{
 
   <nav class="navbar">
     <a href="home.html">Home</a>
-    <a href="services.html" class="active">Services</a>
-    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="about.html" class="active">About</a>
     <a href="contact.html">Contact</a>
     <a class="nav-btn" href="https://forms.gle/d2SWhBS1h5kwyH1U9" target="_blank">Apply Now</a>
   </nav>
 
 </header>
 
-<section class="services-section">
-  <h2>OUR SERVICES</h2>
+<div class="page-title">
+  <h1>TrustEdge Infotech</h1>
+</div>
+
+<section class="about-section">
+
+  <h1>About Us</h1>
   <div class="underline"></div>
 
-  <div class="services-grid">
+  <div class="about-content">
 
-    <a href="website-service.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png">
-      <h3>Website Development</h3>
-      <p>Professional Business website, and custom design service.</p>
-    </a>
+    <div class="about-text">
+      <h2>Your Trusted Business Partner</h2>
 
-    <a href="gst-registration.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-      <h3>GST Registration</h3>
-      <p>Make New GST for Proprietorship, Partnership, Private Ltd and more</p>
-    </a>
+      <p>
+        TrustEdge Infotech ek professional service provider hai jo Website Development,
+        GST Registration, GST Return Filing, Income Tax, PAN, Aadhaar, FSSAI, MSME aur
+        Business Registration jaise services provide karta hai.
+      </p>
 
-    <a href="gst-return.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png">
-      <h3>GST Return Filing</h3>
-      <p>Monthly, quarterly aur yearly GST return filing service.</p>
-    </a>
+      <p>
+        Hamara goal hai ki har client ko fast, secure aur affordable service mile.
+        Hum aapke documents ko safe rakhte hain aur har process ko simple banate hain.
+      </p>
 
-    <a href="msme-registration.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
-      <h3>MSME / Udyam Registration</h3>
-      <p>Udyam Aadhaar / MSME registration to make your business formal.</p>
-    </a>
+      <p>
+        Chahe aap ek chhota business start kar rahe ho ya existing business
+        ko grow karna chahte ho — hum har step par aapki madad karte hain.
+      </p>
+    </div>
 
-    <a href="income-tax.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png">
-      <h3>Income Tax Return</h3>
-      <p>Individuals ITR filing service for firm aur company.</p>
-    </a>
-
-    <a href="fssai.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
-      <h3>FSSAI Registration</h3>
-      <p>Food business ke liye FSSAI license aur registration support.</p>
-    </a>
-
-    <a href="pan-card.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
-      <h3>PAN Card Service</h3>
-      <p>Naya PAN apply, correction and update Services</p>
-    </a>
-
-    <a href="aadhaar.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
-      <h3>Aadhaar Services</h3>
-      <p>Aadhaar update, sudhar aur related services.</p>
-    </a>
-
-    <a href="online-form.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
-      <h3>Online Form Filling</h3>
-      <p>Sabhi sarkari aur private forms bharne ki service.</p>
-    </a>
-
-    <a href="business-registration.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png">
-      <h3>Business Registration</h3>
-      <p>Firm, LLP, company registration me complete support.</p>
-    </a>
-
-    <a href="passport-service.html" class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png">
-      <h3>Passport Service</h3>
-      <p>Passport apply aur appointment process me help.</p>
-    </a>
+    <div class="about-img">
+      <img src="photos/aboutpic.png" alt="About Image">
+    </div>
 
   </div>
+
+  <div class="features">
+
+    <div class="feature-box">
+      <h3>⚡ Fast Service</h3>
+      <p>Kaam jaldi aur sahi tarike se complete.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>🔒 Secure</h3>
+      <p>Aapke documents safe aur confidential rahenge.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>👨‍💼 Expert Support</h3>
+      <p>Har step par professional guidance milega.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>💰 Affordable Fees</h3>
+      <p>Kam cost me best service.</p>
+    </div>
+
+  </div>
+
 </section>
 
 <footer class="footer">
