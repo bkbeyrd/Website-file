@@ -10,74 +10,145 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-html, body{
-  margin:0;
-  padding:0;
+html{
+  scroll-behavior:smooth;
 }
 
 body{
   min-height:100vh;
   display:flex;
   flex-direction:column;
-  font-family:Arial, sans-serif;
   background:#0f3358;
   color:white;
 }
 
-/* NAVBAR */
-.navbar{
-  background:#0f2d52;
-  padding:12px 25px;
+/* HEADER */
+.topbar{
+  background:#ffffff;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  border-bottom:3px solid #ffc107;
+  align-items:center;
+  padding:14px 5%;
+  flex-wrap:wrap;
+  border-bottom:3px solid #f2b400;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.logo{
+.logo-box{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
 }
 
-.logo img{
-  width:50px;
-  height:50px;
+.logo-circle{
+  width:55px;
+  height:55px;
   border-radius:50%;
-  object-fit:cover;
   padding:1px;
-  background:linear-gradient(45deg, #0D2B4D, #1E73E8);
+  background:linear-gradient(45deg,#0D2B4D,#1E73E8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.logo-text h2{
-  font-size:18px;
+.logo-circle img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background:#fff;
+}
+
+.logo-text h1{
+  font-size:1.6rem;
+  color:#0c2b5a;
+}
+
+.logo-text span{
+  color:#1E73E8;
 }
 
 .logo-text p{
-  font-size:11px;
-  color:#ccc;
+  font-size:0.8rem;
+  color:#666;
 }
 
-.nav-links{
+/* NAVBAR */
+.navbar{
   display:flex;
-  gap:22px;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
-.nav-links a{
-  color:#fff;
+.navbar a{
   text-decoration:none;
-  font-size:15px;
+  color:#0c2b5a;
   font-weight:600;
+  font-size:0.95rem;
+  position:relative;
+  padding:6px 4px;
+  transition:0.3s;
 }
 
-.nav-links a:hover{
-  color:#ffc107;
+/* Hover */
+.navbar a:hover{
+  color:#1E73E8;
+}
+
+/* ACTIVE */
+.navbar a.active{
+  color:#1E73E8;
+}
+
+/* Underline animation */
+.navbar a.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:3px;
+  background:#1E73E8;
+  border-radius:10px;
+}
+
+/* APPLY BUTTON */
+.nav-btn{
+  background:#1E73E8;
+  color:#fff !important;
+  padding:10px 16px !important;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .navbar{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  .nav-btn{
+    width:100%;
+    text-align:center;
+  }
 }
 
 /* SERVICES */
 .services-section{
+  flex:1;
   text-align:center;
   background:#0f3358;
   padding:40px 20px;
@@ -137,20 +208,20 @@ body{
 
 /* FOOTER */
 .footer{
-  flex: 1;
   background:#0b2340;
   color:white;
   text-align:center;
-  padding:20px 10px;
+  padding:10px 5px;
+  margin-top:auto;
 }
 
 .footer p{
-  margin:6px 0;
+  margin:5px 0;
   font-size:14px;
 }
 
 .footer-links{
-  margin:10px 0;
+  margin-top:10px;
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
@@ -170,15 +241,21 @@ body{
 
 /* MOBILE */
 @media(max-width:600px){
+  .topbar{
+    align-items:flex-start;
+  }
+
   .navbar{
-    flex-direction:column;
+    width:100%;
     gap:12px;
   }
 
-  .nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:16px;
+  .logo-text h1{
+    font-size:1.3rem;
+  }
+
+  .logo-text p{
+    font-size:0.75rem;
   }
 
   .services-section{
@@ -190,22 +267,27 @@ body{
 
 <body>
 
-<header class="navbar">
-  <div class="logo">
-    <img src="photos/trustedge.png" alt="Logo">
+<header class="topbar">
+
+  <div class="logo-box">
+    <div class="logo-circle">
+      <img src="photos/trustedge.png" alt="logo">
+    </div>
 
     <div class="logo-text">
-      <h2>TrustEdge Infotech</h2>
+      <h1>TrustEdge <span>Infotech</span></h1>
       <p>Your Trusted Business Partner</p>
     </div>
   </div>
 
-  <nav class="nav-links">
+  <nav class="navbar">
     <a href="home.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <a href="services.html" class="active">Services</a>
     <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a class="nav-btn" href="https://forms.gle/d2SWhBS1h5kwyH1U9" target="_blank">Apply Now</a>
   </nav>
+
 </header>
 
 <section class="services-section">
