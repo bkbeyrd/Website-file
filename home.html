@@ -1,339 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrustEdge Infotech - Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrustEdge Infotech - Home</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #f4f6fb;
-      color: #0c2b5a;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1400px;
-      margin: auto;
-      background: #ffffff;
-    }
-
-    /* HEADER */
-    .topbar {
-      background: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 5%;
-      flex-wrap: wrap;
-      gap: 15px;
-      border-bottom: 3px solid #f2b400;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo-box {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .logo-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  padding: 1px; /* 👈 border ki motai */
-  background: linear-gradient(45deg, #0D2B4D, #1E73E8);
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-/* inner white circle */
-.logo-circle img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #fff;
-  object-fit: cover;
+html{
+  scroll-behavior:smooth;
 }
 
-    .logo-text h1 {
-      font-size: 1.8rem;
-      color: #0c2b5a;
-    }
+body{
+  background:#f4f6fb;
+  color:#0c2b5a;
+}
 
-    .logo-text h1 span {
-      color: #1E73E8;
-    }
+.container{
+  width:100%;
+  max-width:1400px;
+  margin:auto;
+  background:#ffffff;
+}
 
-    .logo-text p {
-      font-size: 0.9rem;
-      color: #46546c;
-    }
+/* HEADER */
+.topbar{
+  background:#ffffff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 5%;
+  flex-wrap:wrap;
+  border-bottom:3px solid #f2b400;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
-    .navbar {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.logo-box{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
-    .navbar a {
-      text-decoration: none;
-      color: #0c2b5a;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
+.logo-circle{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  padding:1px;
+  background:linear-gradient(45deg,#0D2B4D,#1E73E8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-    .navbar a:hover {
-      color: #1E73E8;
-    }
+.logo-circle img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background:#fff;
+}
 
-    .nav-btn {
-      background: #1E73E8;
-      padding: 10px 15px;
-      border-radius: 8px;
-      color: #111 !important;
-    }
+.logo-text h1{
+  font-size:1.6rem;
+  color:#0c2b5a;
+}
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 30px;
-      padding: 55px 5% 35px;
-      align-items: center;
-      background: linear-gradient(to right, #ffffff 55%, #eef3fb 100%);
-    }
+.logo-text span{
+  color:#1E73E8;
+}
 
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
+.logo-text p{
+  font-size:0.8rem;
+  color:#666;
+}
 
-    .hero h3 {
-      font-size: 4rem;
-      line-height: 1.05;
-      text-transform: uppercase;
-    }
+/* NAVBAR */
+.navbar{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
 
-    .hero h3 span {
-      color: #1e73e8;
-    }
+.navbar a{
+  text-decoration:none;
+  color:#0c2b5a;
+  font-weight:600;
+  font-size:0.95rem;
+  position:relative;
+  padding:6px 4px;
+  transition:0.3s;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-      margin: 18px 0 28px;
-      font-weight: 600;
-    }
+/* Hover */
+.navbar a:hover{
+  color:#1E73E8;
+}
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+/* ACTIVE */
+.navbar a.active{
+  color:#1E73E8;
+}
 
-    .btn {
-      text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      display: inline-block;
-    }
+/* Underline animation */
+.navbar a.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:3px;
+  background:#1E73E8;
+  border-radius:10px;
+}
 
-    .btn-primary {
-      background: #0c2b5a;
-      color: #fff;
-    }
+/* APPLY BUTTON */
+.nav-btn{
+  background:#1E73E8;
+  color:#fff !important;
+  padding:10px 16px !important;
+  border-radius:8px;
+  font-weight:bold;
+}
 
-    .btn-secondary {
-      background: #25D366;
-      color: #111;
-    }
+/* MOBILE */
+@media(max-width:600px){
 
-    .hero-image {
-      display: flex;
-      justify-content: center;
-    }
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
 
-    .hero-card {
-      width: 100%;
-      max-width: 450px;
-      background: #fff;
-      border-radius: 24px;
-      padding: 18px;
-      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
-      border: 4px solid #0c2b5a;
-    }
+  .navbar{
+    width:100%;
+    justify-content:space-between;
+  }
 
-    .hero-card img {
-      width: 100%;
-      border-radius: 18px;
-      display: block;
-    }
+  .nav-btn{
+    width:100%;
+    text-align:center;
+  }
+}
 
-    /* SERVICES */
-    .services {
-      padding: 35px 5% 45px;
-      background: #0c2b5a;
-    }
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:30px;
+  padding:55px 5% 35px;
+  align-items:center;
+  background:linear-gradient(to right, #ffffff 55%, #eef3fb 100%);
+}
 
-    .section-title {
-      background: #0c2b5a;
-      color: #fff;
-      width: fit-content;
-      margin: 0 auto 28px;
-      padding: 14px 30px;
-      border-radius: 18px;
-      font-size: 1.8rem;
-      font-weight: bold;
-      border-bottom: 5px solid #f2b400;
-    }
+.hero h2{
+  font-size:2rem;
+  margin-bottom:10px;
+}
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 18px;
-    }
+.hero h3{
+  font-size:4rem;
+  line-height:1.05;
+  text-transform:uppercase;
+}
 
-    .service-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 22px 16px;
-      text-align: center;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: 0.3s ease;
-    }
+.hero h3 span{
+  color:#1e73e8;
+}
 
-    .service-card:hover {
-      transform: translateY(-6px);
-    }
+.hero p{
+  font-size:1.2rem;
+  margin:18px 0 28px;
+  font-weight:600;
+}
 
-    .service-card .icon {
-      font-size: 2.7rem;
-      margin-bottom: 12px;
-    }
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
 
-    .service-card h4 {
-      color: #0c2b5a;
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-      min-height: 50px;
-    }
+.btn{
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:10px;
+  font-weight:bold;
+  display:inline-block;
+}
 
-    .service-card p {
-      color: #33425b;
-      font-size: 0.96rem;
-      line-height: 1.5;
-    }
+.btn-primary{
+  background:#0c2b5a;
+  color:#fff;
+}
 
-    /* ABOUT */
-    .about {
-      padding: 40px 5%;
-      background: #ffffff;
-      text-align: center;
-    }
+.btn-secondary{
+  background:#25D366;
+  color:#111;
+}
 
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 12px;
-      color: #0c2b5a;
-    }
+.hero-image{
+  display:flex;
+  justify-content:center;
+}
 
-    .about p {
-      max-width: 850px;
-      margin: auto;
-      line-height: 1.7;
-      font-size: 1.05rem;
-      color: #33425b;
-    }
+.hero-card{
+  width:100%;
+  max-width:450px;
+  background:#fff;
+  border-radius:24px;
+  padding:18px;
+  box-shadow:0 14px 35px rgba(0,0,0,0.12);
+  border:4px solid #0c2b5a;
+}
 
-    /* FEATURES */
-    .features {
-      background: #08244d;
-      color: #fff;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      padding: 26px 5%;
-      text-align: center;
-    }
+.hero-card img{
+  width:100%;
+  border-radius:18px;
+  display:block;
+}
 
-    .feature-box h5 {
-      font-size: 1.25rem;
-      margin-bottom: 6px;
-      color: #f2b400;
-    }
+/* SERVICES */
+.services{
+  padding:35px 5% 45px;
+  background:#0c2b5a;
+}
 
-    /* CONTACT */
-    .contact-bar {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      background: #fff;
-    }
+.section-title{
+  background:#0c2b5a;
+  color:#fff;
+  width:fit-content;
+  margin:0 auto 28px;
+  padding:14px 30px;
+  border-radius:18px;
+  font-size:1.8rem;
+  font-weight:bold;
+  border-bottom:5px solid #f2b400;
+}
 
-    .contact-left,
-    .contact-right {
-      padding: 28px 5%;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+  gap:18px;
+}
 
-    .contact-left {
-      background: #f2b400;
-      color: #111;
-    }
+.service-card{
+  background:#fff;
+  border-radius:18px;
+  padding:22px 16px;
+  text-align:center;
+  box-shadow:0 8px 18px rgba(0,0,0,0.12);
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  transition:0.3s ease;
+}
 
-    .contact-right {
-      background: #ffffff;
-      color: #0c2b5a;
-    }
+.service-card:hover{
+  transform:translateY(-6px);
+}
 
-    .contact-icon {
-      font-size: 2.8rem;
-    }
+.service-card .icon{
+  font-size:2.7rem;
+  margin-bottom:12px;
+}
 
-    .contact-text h4 {
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-    }
+.service-card h4{
+  color:#0c2b5a;
+  font-size:1.25rem;
+  margin-bottom:10px;
+  min-height:50px;
+}
 
-    .contact-text a,
-    .contact-text p {
-      font-size: 1.6rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: inherit;
-    }
+.service-card p{
+  color:#33425b;
+  font-size:0.96rem;
+  line-height:1.5;
+}
 
-    /* FOOTER */
-    .footer{
+/* ABOUT */
+.about{
+  padding:40px 5%;
+  background:#ffffff;
+  text-align:center;
+}
+
+.about h2{
+  font-size:2rem;
+  margin-bottom:12px;
+  color:#0c2b5a;
+}
+
+.about p{
+  max-width:850px;
+  margin:auto;
+  line-height:1.7;
+  font-size:1.05rem;
+  color:#33425b;
+}
+
+/* FEATURES */
+.features{
+  background:#08244d;
+  color:#fff;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:15px;
+  padding:26px 5%;
+  text-align:center;
+}
+
+.feature-box h5{
+  font-size:1.25rem;
+  margin-bottom:6px;
+  color:#f2b400;
+}
+
+/* CONTACT */
+.contact-bar{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:#fff;
+}
+
+.contact-right{
+  padding:28px 5%;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+  background:#ffffff;
+  color:#0c2b5a;
+}
+
+.contact-text h4{
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+
+.contact-text p{
+  font-size:1.1rem;
+  font-weight:600;
+}
+
+/* CALL BUTTON */
+.call-btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:40px 15px;
+  background:#1E73E8;
+  color:#fff;
+  padding:10px 15px;
+  border-radius:50px;
+  font-size:1.2rem;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,0.2);
+  transition:all 0.3s ease;
+}
+
+.call-btn:hover{
+  transform:scale(1.05);
+  background:linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
+/* FOOTER */
+.footer{
   background:#0b2340;
   color:white;
   text-align:center;
   padding:10px 5px;
 }
 
-/* LINKS FIX */
+.footer p{
+  margin:5px 0;
+}
+
 .footer-links{
   margin-top:10px;
   display:flex;
@@ -353,305 +402,279 @@
   text-decoration:underline;
 }
 
-    /* FLOATING BUTTONS */
-    .floating-whatsapp,
-    .floating-form {
-      position: fixed;
-      right: 18px;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-      z-index: 9999;
-      transition: 0.3s;
-    }
-
-    .floating-whatsapp {
-      bottom: 18px;
-      background: #25D366;
-    }
-
-    .floating-form {
-      bottom: 88px;
-      background: #673ab7;
-    }
-
-    .floating-whatsapp:hover,
-    .floating-form:hover {
-      transform: scale(1.1);
-    }
-      .floating-whatsapp img,
-    .floating-form img {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-      display: block;
-    }
-    .call-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px auto;
-  background: #1E73E8; /* sky blue gradient */
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 40px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 40px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+/* FLOATING BUTTONS */
+.floating-whatsapp,
+.floating-form{
+  position:fixed;
+  right:18px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);
+  z-index:9999;
+  transition:0.3s;
 }
 
-.call-btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
+.floating-whatsapp{
+  bottom:18px;
+  background:#25D366;
 }
 
-.call-btn:active {
-  transform: scale(0.95);
-}
-.call-btn a {
-  text-decoration: none;
-  color: #fff;
+.floating-form{
+  bottom:88px;
+  background:#673ab7;
 }
 
-.call-btn a:hover,
-.call-btn a:active,
-.call-btn a:visited {
-  text-decoration: none;
-  color: #fff;
+.floating-whatsapp:hover,
+.floating-form:hover{
+  transform:scale(1.1);
 }
-    /* MOBILE */
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
 
-      .features {
-        grid-template-columns: repeat(2, 1fr);
-      }
+.floating-whatsapp img,
+.floating-form img{
+  width:30px;
+  height:30px;
+  object-fit:contain;
+  display:block;
+}
 
-      .contact-bar {
-        grid-template-columns: 1fr;
-      }
-    }
+/* MOBILE */
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
 
-    @media (max-width: 600px) {
-      .topbar {
-        align-items: flex-start;
-      }
+  .features{
+    grid-template-columns:repeat(2, 1fr);
+  }
 
-      .navbar {
-        width: 100%;
-        gap: 12px;
-      }
+  .contact-bar{
+    grid-template-columns:1fr;
+  }
+}
 
-      .hero h3 {
-        font-size: 2.1rem;
-      }
+@media(max-width:600px){
+  .topbar{
+    align-items:flex-start;
+  }
 
-      .hero h2 {
-        font-size: 1.3rem;
-      }
+  .navbar{
+    width:100%;
+    gap:8px;
+  }
 
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
+  .navbar a{
+    font-size:0.9rem;
+    padding:8px 10px;
+  }
 
-      .features {
-        grid-template-columns: 1fr;
-      }
+  .hero h3{
+    font-size:2.1rem;
+  }
 
-      .contact-text a,
-      .contact-text p {
-        font-size: 1.3rem;
-      }
-    }
-  </style>
+  .hero h2{
+    font-size:1.3rem;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header class="topbar">
-      <div class="logo-box">
-        <div class="logo-circle">
-  <img src="photos/trustedge.png" alt="logo">
-</div>
-        <div class="logo-text">
-          <h1>TrustEdge <span>Infotech</span></h1>
-          <p>Your Trusted Business Partner</p>
-        </div>
-      </div>
 
-      <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="nav-btn" href="https://forms.gle/d2SWhBS1h5kwyH1U9" target="_blank">Apply Now</a>
-      </nav>
-    </header>
-    <section class="hero">
-      <div class="hero-content">
-        <h2>ALL TYPES OF</h2>
-        <h3>IT,Digital  <span>& Business SERVICES</span></h3>
-        <p>तेज़ सेवा • सही सलाह • भरोसेमंद समाधान</p>
+<div class="container">
 
-        <div class="hero-buttons">
-          <a href="#services" class="btn btn-primary">Our Services</a>
-          <a href="https://wa.me/917563062376?text=Hello%20I%20want%20service" class="btn btn-secondary">WhatsApp Now</a>
-        </div>
-      </div>
+<header class="topbar">
 
-      <div class="hero-image">
-        <div class="hero-card">
-          <img src="photos/trustedgef.png" alt="TrustEdge Services">
-        </div>
-      </div>
-    </section>
+  <div class="logo-box">
+    <div class="logo-circle">
+      <img src="photos/trustedge.png" alt="logo">
+    </div>
 
-    <section class="services" id="services">
-      <div class="section-title">OUR SERVICES</div>
+    <div class="logo-text">
+      <h1>TrustEdge <span>Infotech</span></h1>
+      <p>Your Trusted Business Partner</p>
+    </div>
+  </div>
 
-      <div class="services-grid">
-                <a href="website-service.html" class="service-card">
-          <div class="icon">💻</div>
-          <h4>Website Development</h4>
-          <p>Business website, GST portal, form website aur custom design service uplabdh.</p>
-        </a>
-        <a href="gst-registration.html" class="service-card">
-          <div class="icon">📑</div>
-          <h4>GST Registration</h4>
-          <p>Naya GST banwaiye. Proprietorship, Partnership, Private Ltd. aur anya business ke liye.</p>
-        </a>
+  <nav class="navbar">
+    <a href="home.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a class="nav-btn" href="https://forms.gle/d2SWhBS1h5kwyH1U9" target="_blank">Apply Now</a>
+  </nav>
 
-        <a href="gst-return.html" class="service-card">
-          <div class="icon">🧾</div>
-          <h4>GST Return Filing</h4>
-          <p>Maasik, trimestral aur varshik GST return filing tez aur sahi tareeke se.</p>
-        </a>
+</header>
 
-        <a href="msme-registration.html" class="service-card">
-          <div class="icon">🏢</div>
-          <h4>MSME / Udyam Registration</h4>
-          <p>Udyam Aadhaar / MSME registration karwaiye aur business ko formal banaiye.</p>
-        </a>
+<section class="hero">
+  <div class="hero-content">
+    <h2>ALL TYPES OF</h2>
+    <h3>IT,Digital <span>& Business SERVICES</span></h3>
+    <p>तेज़ सेवा • सही सलाह • भरोसेमंद समाधान</p>
 
-        <a href="income-tax.html" class="service-card">
-          <div class="icon">💼</div>
-          <h4>Income Tax Return</h4>
-          <p>Individuals, HUF, Firm aur Company ke liye ITR filing service uplabdh.</p>
-        </a>
+    <div class="hero-buttons">
+      <a href="#services" class="btn btn-primary">Our Services</a>
+      <a href="https://wa.me/917563062376?text=Hello%20I%20want%20service" class="btn btn-secondary">WhatsApp Now</a>
+    </div>
+  </div>
 
-        <a href="fssai.html" class="service-card">
-          <div class="icon">🍴</div>
-          <h4>FSSAI Registration</h4>
-          <p>Food business ke liye FSSAI registration aur food license support.</p>
-        </a>
+  <div class="hero-image">
+    <div class="hero-card">
+      <img src="photos/trustedgef.png" alt="TrustEdge Services">
+    </div>
+  </div>
+</section>
 
-        <a href="pan-card.html" class="service-card">
-          <div class="icon">🪪</div>
-          <h4>PAN Card Service</h4>
-          <p>Naya PAN card apply, correction aur update se judi poori madad.</p>
-        </a>
+<section class="services" id="services">
+  <div class="section-title">OUR SERVICES</div>
 
-        <a href="aadhaar.html" class="service-card">
-          <div class="icon">🆔</div>
-          <h4>Aadhaar Services</h4>
-          <p>Aadhaar update, sudhar aur anya Aadhaar sambandhit sevaayein.</p>
-        </a>
+  <div class="services-grid">
 
-        <a href="online-form.html" class="service-card">
-          <div class="icon">📝</div>
-          <h4>Online Form Filling</h4>
-          <p>Sabhi prakar ke sarkari aur private online forms bharne ki service.</p>
-        </a>
+    <a href="website-service.html" class="service-card">
+      <div class="icon">💻</div>
+      <h4>Website Development</h4>
+      <p>Business website, GST portal, form website aur custom design service uplabdh.</p>
+    </a>
 
-        <a href="business-registration.html" class="service-card">
-          <div class="icon">🏬</div>
-          <h4>Business Registration</h4>
-          <p>Dukaan, firm, LLP, company aur anya business registration support.</p>
-        </a>
+    <a href="gst-registration.html" class="service-card">
+      <div class="icon">📑</div>
+      <h4>GST Registration</h4>
+      <p>Naya GST banwaiye. Proprietorship, Partnership, Private Ltd. aur anya business ke liye.</p>
+    </a>
 
-        <a href="passport-service.html" class="service-card">
-          <div class="icon">📘</div>
-          <h4>Passport Service</h4>
-          <p>Passport apply, correction aur appointment process mein complete help.</p>
-        </a>
-      </div>
-    </section>
+    <a href="gst-return.html" class="service-card">
+      <div class="icon">🧾</div>
+      <h4>GST Return Filing</h4>
+      <p>Maasik, trimestral aur varshik GST return filing tez aur sahi tareeke se.</p>
+    </a>
 
-    <section class="about" id="about">
-      <h2>Why Choose TrustEdge Infotech?</h2>
-      <p>
-        TrustEdge Infotech me Website Development, GST Registration, GST Return Filing, PAN, Aadhaar, FSSAI,
-        MSME aur Passport jaise services ke liye professional support milta hai.
-        Hum documents ko secure rakhte hain aur kaam ko fast, accurate aur affordable fee me complete karne ki koshish karte hain.
-      </p>
-    </section>
+    <a href="msme-registration.html" class="service-card">
+      <div class="icon">🏢</div>
+      <h4>MSME / Udyam Registration</h4>
+      <p>Udyam Aadhaar / MSME registration karwaiye aur business ko formal banaiye.</p>
+    </a>
 
-    <section class="features">
-      <div class="feature-box">
-        <h5>⚡ Fast Service</h5>
-        <p>Kaam jaldi aur sahi tarike se</p>
-      </div>
-      <div class="feature-box">
-        <h5>🔒 100% Secure</h5>
-        <p>Aapke documents safe rahenge</p>
-      </div>
-      <div class="feature-box">
-        <h5>👨‍💼 Expert Support</h5>
-        <p>Professional guidance har step par</p>
-      </div>
-      <div class="feature-box">
-        <h5>💰 Affordable Fees</h5>
-        <p>Kam kharch me behtar service</p>
-      </div>
-    </section>
+    <a href="income-tax.html" class="service-card">
+      <div class="icon">💼</div>
+      <h4>Income Tax Return</h4>
+      <p>Individuals, HUF, Firm aur Company ke liye ITR filing service uplabdh.</p>
+    </a>
 
-    <section class="contact-bar" id="contact">
+    <a href="fssai.html" class="service-card">
+      <div class="icon">🍴</div>
+      <h4>FSSAI Registration</h4>
+      <p>Food business ke liye FSSAI registration aur food license support.</p>
+    </a>
 
+    <a href="pan-card.html" class="service-card">
+      <div class="icon">🪪</div>
+      <h4>PAN Card Service</h4>
+      <p>Naya PAN card apply, correction aur update se judi poori madad.</p>
+    </a>
+
+    <a href="aadhaar.html" class="service-card">
+      <div class="icon">🆔</div>
+      <h4>Aadhaar Services</h4>
+      <p>Aadhaar update, sudhar aur anya Aadhaar sambandhit sevaayein.</p>
+    </a>
+
+    <a href="online-form.html" class="service-card">
+      <div class="icon">📝</div>
+      <h4>Online Form Filling</h4>
+      <p>Sabhi prakar ke sarkari aur private online forms bharne ki service.</p>
+    </a>
+
+    <a href="business-registration.html" class="service-card">
+      <div class="icon">🏬</div>
+      <h4>Business Registration</h4>
+      <p>Dukaan, firm, LLP, company aur anya business registration support.</p>
+    </a>
+
+    <a href="passport-service.html" class="service-card">
+      <div class="icon">📘</div>
+      <h4>Passport Service</h4>
+      <p>Passport apply, correction aur appointment process mein complete help.</p>
+    </a>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>Why Choose TrustEdge Infotech?</h2>
+  <p>
+    TrustEdge Infotech me Website Development, GST Registration, GST Return Filing, PAN, Aadhaar, FSSAI,
+    MSME aur Passport jaise services ke liye professional support milta hai.
+    Hum documents ko secure rakhte hain aur kaam ko fast, accurate aur affordable fee me complete karne ki koshish karte hain.
+  </p>
+</section>
+
+<section class="features">
+  <div class="feature-box">
+    <h5>⚡ Fast Service</h5>
+    <p>Kaam jaldi aur sahi tarike se</p>
+  </div>
+
+  <div class="feature-box">
+    <h5>🔒 100% Secure</h5>
+    <p>Aapke documents safe rahenge</p>
+  </div>
+
+  <div class="feature-box">
+    <h5>👨‍💼 Expert Support</h5>
+    <p>Professional guidance har step par</p>
+  </div>
+
+  <div class="feature-box">
+    <h5>💰 Affordable Fees</h5>
+    <p>Kam kharch me behtar service</p>
+  </div>
+</section>
+
+<section class="contact-bar" id="contact">
   <div class="contact-buttons">
-  <a href="tel:+917563062376" class="call-btn">
-    📞 Call Now
-  </a>
-</div>
+    <a href="tel:+917563062376" class="call-btn">📞 Call Now</a>
+  </div>
 
   <div class="contact-right">
     <div class="contact-text">
       <h4>Samastipur, Patna, Bihar</h4>
-      <p style="font-size: 1.1rem; font-weight: 600;">
-        We are always here to help you!
-      </p>
+      <p>We are always here to help you!</p>
     </div>
   </div>
-
 </section>
+
 <footer class="footer">
   <p>Samastipur, Patna, Bihar | Call: +91 7563062376</p>
+
   <div class="footer-links">
     <a href="terms.html">Terms & Conditions</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="refund.html">Refund Policy</a>
     <a href="contact.html">Contact</a>
   </div>
+
   <p>© 2026 TrustEdge Infotech | All Rights Reserved</p>
 </footer>
-  </div>
 
-  <a class="floating-form" href="https://forms.gle/d2SWhBS1h5kwyH1U9" target="_blank">
-    <img src="photos/form.png" alt="Google Form">
-  </a>
+</div>
 
- <a class="floating-whatsapp" href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service">
+<a class="floating-form" href="https://forms.gle/d2SWhBS1h5kwyH1U9" target="_blank">
+  <img src="photos/form.png" alt="Google Form">
+</a>
+
+<a class="floating-whatsapp" href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
