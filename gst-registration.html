@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GST Registration - Tax Solution</title>
+  <title>GST Registration - TrustEdge Infotech</title>
   <style>
     *{
       margin:0;
@@ -17,12 +17,95 @@
       color:#0c2b5a;
     }
 
-    .header{
-      background:#0c2b5a;
-      color:#fff;
-      padding:18px 20px;
-      text-align:center;
+    /* Header */
+    .container2 {
+      width: 100%;
+      max-width: 1400px;
+      margin: auto;
+      background: #ffffff;
     }
+
+    /* HEADER */
+    .topbar {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      flex-wrap: wrap;
+      gap: 15px;
+      border-bottom: 3px solid #f2b400;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 1px; /* 👈 border ki motai */
+  background: linear-gradient(45deg, #0D2B4D, #1E73E8);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* inner white circle */
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: cover;
+}
+
+    .logo-text h1 {
+      font-size: 1.8rem;
+      color: #0c2b5a;
+    }
+
+    .logo-text h1 span {
+      color: #1E73E8;
+    }
+
+    .logo-text p {
+      font-size: 0.9rem;
+      color: #46546c;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #0c2b5a;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .navbar a:hover {
+      color: #1E73E8;
+    }
+
+    .nav-btn {
+      background: #1E73E8;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #111 !important;
+    }
+
 
     .header h1{
       font-size:28px;
@@ -115,13 +198,57 @@
       color:#444;
       font-size:14px;
     }
+    /* FOOTER */
+.footer{
+  background:#0b2340;
+  color:white;
+  text-align:center;
+  padding:20px 10px;
+  flex:1px;
+}
+
+.footer-links{
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.footer-links a{
+  color:#ffc107;
+  text-decoration:none;
+  font-size:14px;
+  white-space:nowrap;
+}
+
+.footer-links a:hover{
+  text-decoration:underline;
+}
+
   </style>
 </head>
 <body>
+  <div class="container2">
+    <header class="topbar">
+      <div class="logo-box">
+        <div class="logo-circle">
+  <img src="photos/trustedge.png" alt="logo">
+</div>
+        <div class="logo-text">
+          <h1>TrustEdge <span>Infotech</span></h1>
+          <p>Your Trusted Business Partner</p>
+        </div>
+      </div>
 
-  <div class="header">
-    <h1>Tax Solution</h1>
-  </div>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-btn" href="https://forms.gle/d2SWhBS1h5kwyH1U9" target="_blank">Apply Now</a>
+      </nav>
+    </header>
 
   <div class="container">
     <div class="top">
@@ -162,9 +289,22 @@
     </div>
 
     <div class="footer">
-      © Tax Solution | GST Registration Support
+      © TrustEdge Infotech | GST Registration Support
     </div>
+    </div>
+    <footer class="footer">
+  <p>Samastipur, Bihar | Call: +91 7563062376</p>
+
+  <div class="footer-links">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="refund.html">Refund</a>
+    <a href="contact.html">Contact</a>
   </div>
+
+  <p>© 2026 TrustEdge Infotech | All Rights Reserved</p>
+</footer>
+  
 
 </body>
 </html>

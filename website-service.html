@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Website Development - Tax Solution</title>
+  <title>Website Development - TrustEdge Infotech</title>
 
   <style>
     *{
@@ -37,17 +37,15 @@
       gap:10px;
     }
 
-    .logo-circle{
-      width:52px;
-      height:52px;
-      border:3px solid #0b2d55;
+    .logo img{
+      width:50px;
+      height:50px;
+      padding: 1px;
       border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:bold;
-      color:#f4b400;
-      font-size:22px;
+      object-fit:cover;
+      flex-shrink:10px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #0D2B4D, #1E73E8);
     }
 
     .logo h2{
@@ -56,7 +54,7 @@
     }
 
     .logo h2 span{
-      color:#f4b400;
+      color:#1E73E8;
     }
 
     .logo p{
@@ -73,7 +71,7 @@
     }
 
     .apply-btn{
-      background:#f4b400;
+      background:#1E73E8;
       padding:12px 20px;
       border-radius:8px;
       color:#0b2d55;
@@ -96,7 +94,7 @@
     }
 
     .hero h1 span{
-      color:#f4b400;
+      color:#1E73E8;
     }
 
     .hero p{
@@ -121,8 +119,8 @@
       color:white;
     }
 
-    .btn-yellow{
-      background:#f4b400;
+    .btn-electricblue{
+      background:#25D366;
       color:#0b2d55;
     }
 
@@ -170,7 +168,7 @@
     }
 
     .section-title span{
-      color:#f4b400;
+      color:#1E73E8;
     }
 
     .section-subtitle{
@@ -245,7 +243,7 @@
     .price{
       font-size:42px;
       font-weight:bold;
-      color:#f4b400;
+      color:#1E73E8;
       margin:15px 0;
     }
 
@@ -297,20 +295,32 @@
       font-weight:bold;
     }
 
-    footer{
-      background:#081f3d;
-      color:white;
-      padding:30px 6%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:20px;
-    }
+    /* FOOTER */
+.footer{
+  background:#0b2340;
+  color:white;
+  text-align:center;
+  padding:20px 10px;
+}
 
-    footer p{
-      line-height:1.6;
-    }
+.footer-links{
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.footer-links a{
+  color:#ffc107;
+  text-decoration:none;
+  font-size:14px;
+  white-space:nowrap;
+}
+
+.footer-links a:hover{
+  text-decoration:underline;
+}
 
     .floating-whatsapp{
       position:fixed;
@@ -332,13 +342,52 @@
     }
 
     @media(max-width:900px){
+      header{
+        padding:14px 4%;
+        flex-direction:column;
+        align-items:center;
+        gap:12px;
+      }
+
+      .logo{
+        width:100%;
+        justify-content:center;
+      }
+
+      .logo h2{
+        font-size:28px;
+        line-height:1.1;
+        white-space:nowrap;
+      }
+
+      .logo p{
+        font-size:15px;
+      }
+
       nav{
-        display:none;
+        display:flex;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:8px;
+      }
+
+      nav a{
+        margin-left:0;
+        font-size:13px;
+        padding:8px 10px;
+        background:#f5f7fb;
+        border-radius:6px;
+      }
+
+      .apply-btn{
+        padding:8px 12px;
       }
 
       .hero{
         grid-template-columns:1fr;
         text-align:center;
+        padding:55px 6%;
       }
 
       .hero h1{
@@ -355,6 +404,37 @@
     }
 
     @media(max-width:550px){
+      header{
+        position:relative;
+      }
+
+      .logo img{
+        width:45px;
+        height:45px;
+      }
+
+      .logo h2{
+        font-size:22px;
+        white-space:normal;
+      }
+
+      .logo p{
+        font-size:12px;
+      }
+
+      nav{
+        gap:6px;
+      }
+
+      nav a{
+        font-size:12px;
+        padding:7px 8px;
+      }
+
+      nav .apply-btn{
+        background:#f4b400;
+      }
+
       .grid{
         grid-template-columns:1fr;
       }
@@ -370,10 +450,6 @@
       .price{
         font-size:34px;
       }
-
-      .logo h2{
-        font-size:20px;
-      }
     }
   </style>
 </head>
@@ -382,15 +458,15 @@
 
 <header>
   <div class="logo">
-    <div class="logo-circle">TS</div>
+    <img src="photos/trustedge.png" alt="logo">
     <div>
-      <h2>TAX <span>SOLUTION</span></h2>
+      <h2>TrustEdge <span>Infotech</span></h2>
       <p>Your Trusted Business Partner</p>
     </div>
   </div>
 
   <nav>
-    <a href="index.html">Home</a>
+    <a href="home.html">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -402,13 +478,13 @@
   <div>
     <h1>Professional <span>Website Development</span> Service</h1>
     <p>
-      Business website, GST portal, service website, landing page aur custom form based website
+      Business website, Service website, landing page and custom form based website
       ke liye fast, mobile-friendly aur professional website development service.
     </p>
 
     <div class="hero-buttons">
       <a href="contact.html" class="btn-primary">Apply Now</a>
-      <a href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service" class="btn-yellow">WhatsApp Now</a>
+      <a href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service" class="btn-electricblue">WhatsApp Now</a>
     </div>
   </div>
 
@@ -492,31 +568,33 @@
     </div>
 
     <a href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service" class="btn-primary">Book Website Service</a>
-      <h2>Pay ₹1 for Booking Appointment</h2>
-       <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Si64O8ZRIkdMyK" async> </script> </form>
+    <h2 style="margin-top:20px;">Pay ₹1 for Booking Appointment</h2>
+    <form>
+      <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Si64O8ZRIkdMyK" async></script>
+    </form>
   </div>
 </section>
 
 <section class="cta">
-  <h2>Apna Business Online Le Jaiye</h2>
+  <h2>TrustEdge Infotech Providing Websites for Personal Business</h2>
   <p>Professional website ke liye abhi contact karein.</p>
   <a href="tel:+917563062376">Call Now: +91 7563062376</a>
 </section>
 
-<footer>
-  <div>
-    <h3>Tax Solution</h3>
-    <p>Samastipur, Patna, Bihar<br>We are always here to help you!</p>
+ <footer class="footer">
+  <p>Samastipur, Bihar | Call: +91 7563062376</p>
+  <div class="footer-links">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="refund.html">Refund</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-  <div>
-    <p>📞 Call Now: +91 7563062376</p>
-    <p>💬 WhatsApp: +91 7563062376</p>
-  </div>
+  <p>© 2026 TrustEdge Infotech | All Rights Reserved</p>
 </footer>
 
 <a class="floating-whatsapp" href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 </body>
