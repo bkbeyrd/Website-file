@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Development - TrustEdge Infotech</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f5f7fb;
+      color:#0b2d55;
+    }
+
+    header{
+      background:white;
+      padding:14px 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 3px 12px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:1000;
+      border-bottom:4px solid #f4b400;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo img{
+      width:50px;
+      height:50px;
+      padding: 1px;
+      border-radius:50%;
+      object-fit:cover;
+      flex-shrink:10px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #0D2B4D, #1E73E8);
+    }
+
+    .logo h2{
+      font-size:24px;
+      color:#0b2d55;
+    }
+
+    .logo h2 span{
+      color:#1E73E8;
+    }
+
+    .logo p{
+      font-size:13px;
+      color:#555;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#0b2d55;
+      margin-left:20px;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .apply-btn{
+      background:#1E73E8;
+      padding:12px 20px;
+      border-radius:8px;
+      color:#0b2d55;
+    }
+
+    .hero{
+      padding:70px 6%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+      background:linear-gradient(120deg,#ffffff,#eef5ff);
+    }
+
+    .hero h1{
+      font-size:48px;
+      line-height:1.15;
+      color:#0b2d55;
+      margin-bottom:18px;
+    }
+
+    .hero h1 span{
+      color:#1E73E8;
+    }
+
+    .hero p{
+      font-size:17px;
+      line-height:1.7;
+      color:#333;
+      margin-bottom:24px;
+    }
+
+    .hero-buttons a{
+      display:inline-block;
+      text-decoration:none;
+      padding:14px 22px;
+      border-radius:8px;
+      font-weight:bold;
+      margin-right:10px;
+      margin-top:8px;
+    }
+
+    .btn-primary{
+      background:#0b2d55;
+      color:white;
+    }
+
+    .btn-electricblue{
+      background:#25D366;
+      color:#0b2d55;
+    }
+
+    .hero-box{
+      background:white;
+      padding:28px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+      border:2px solid #e7edf7;
+    }
+
+    .hero-box h2{
+      margin-bottom:15px;
+      color:#0b2d55;
+    }
+
+    .hero-box ul{
+      list-style:none;
+    }
+
+    .hero-box ul li{
+      padding:12px 0;
+      border-bottom:1px solid #edf1f7;
+      font-size:16px;
+      color:#333;
+    }
+
+    .hero-box ul li::before{
+      content:"✔";
+      color:#f4b400;
+      font-weight:bold;
+      margin-right:10px;
+    }
+
+    .section{
+      padding:60px 6%;
+      background:white;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:34px;
+      margin-bottom:15px;
+      color:#0b2d55;
+    }
+
+    .section-title span{
+      color:#1E73E8;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:850px;
+      margin:0 auto 35px;
+      color:#444;
+      line-height:1.7;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:#f5f7fb;
+      padding:28px 22px;
+      border-radius:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .card .icon{
+      font-size:38px;
+      margin-bottom:12px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      font-size:20px;
+      color:#0b2d55;
+    }
+
+    .card p{
+      color:#444;
+      line-height:1.6;
+      font-size:15px;
+    }
+
+    .dark-section{
+      padding:60px 6%;
+      background:#0b2d55;
+      color:white;
+    }
+
+    .dark-section .section-title{
+      color:white;
+    }
+
+    .price-box{
+      max-width:900px;
+      margin:auto;
+      background:white;
+      color:#0b2d55;
+      border-radius:20px;
+      padding:35px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.18);
+      text-align:center;
+    }
+
+    .price-box h2{
+      font-size:30px;
+      margin-bottom:10px;
+    }
+
+    .price{
+      font-size:42px;
+      font-weight:bold;
+      color:#1E73E8;
+      margin:15px 0;
+    }
+
+    .price-box p{
+      color:#444;
+      line-height:1.7;
+      margin-bottom:20px;
+    }
+
+    .price-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      text-align:left;
+      margin:25px 0;
+    }
+
+    .price-list div{
+      background:#f5f7fb;
+      padding:14px;
+      border-radius:10px;
+      color:#333;
+    }
+
+    .cta{
+      padding:55px 6%;
+      background:#f4b400;
+      text-align:center;
+      color:#0b2d55;
+    }
+
+    .cta h2{
+      font-size:34px;
+      margin-bottom:12px;
+    }
+
+    .cta p{
+      font-size:17px;
+      margin-bottom:20px;
+    }
+
+    .cta a{
+      display:inline-block;
+      text-decoration:none;
+      background:#0b2d55;
+      color:white;
+      padding:15px 26px;
+      border-radius:8px;
+      font-weight:bold;
+    }
+
+    /* FOOTER */
+.footer{
+  background:#0b2340;
+  color:white;
+  text-align:center;
+  padding:20px 10px;
+}
+
+.footer-links{
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.footer-links a{
+  color:#ffc107;
+  text-decoration:none;
+  font-size:14px;
+  white-space:nowrap;
+}
+
+.footer-links a:hover{
+  text-decoration:underline;
+}
+
+    .floating-whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      width:58px;
+      height:58px;
+      background:#25D366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+      z-index:999;
+    }
+
+    .floating-whatsapp img{
+      width:32px;
+    }
+
+    @media(max-width:900px){
+      header{
+        padding:14px 4%;
+        flex-direction:column;
+        align-items:center;
+        gap:12px;
+      }
+
+      .logo{
+        width:100%;
+        justify-content:center;
+      }
+
+      .logo h2{
+        font-size:28px;
+        line-height:1.1;
+        white-space:nowrap;
+      }
+
+      .logo p{
+        font-size:15px;
+      }
+
+      nav{
+        display:flex;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:8px;
+      }
+
+      nav a{
+        margin-left:0;
+        font-size:13px;
+        padding:8px 10px;
+        background:#f5f7fb;
+        border-radius:6px;
+      }
+
+      .apply-btn{
+        padding:8px 12px;
+      }
+
+      .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:55px 6%;
+      }
+
+      .hero h1{
+        font-size:36px;
+      }
+
+      .grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .price-list{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:550px){
+      header{
+        position:relative;
+      }
+
+      .logo img{
+        width:45px;
+        height:45px;
+      }
+
+      .logo h2{
+        font-size:22px;
+        white-space:normal;
+      }
+
+      .logo p{
+        font-size:12px;
+      }
+
+      nav{
+        gap:6px;
+      }
+
+      nav a{
+        font-size:12px;
+        padding:7px 8px;
+      }
+
+      nav .apply-btn{
+        background:#f4b400;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:32px;
+      }
+
+      .section-title{
+        font-size:28px;
+      }
+
+      .price{
+        font-size:34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="photos/trustedge.png" alt="logo">
+    <div>
+      <h2>TrustEdge <span>Infotech</span></h2>
+      <p>Your Trusted Business Partner</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="apply-btn">Apply Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Professional <span>Website Development</span> Service</h1>
+    <p>
+      Business website, Service website, landing page and custom form based website
+      ke liye fast, mobile-friendly aur professional website development service.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="contact.html" class="btn-primary">Apply Now</a>
+      <a href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service" class="btn-electricblue">WhatsApp Now</a>
+    </div>
+  </div>
+
+  <div class="hero-box">
+    <h2>Website Service Includes</h2>
+    <ul>
+      <li>Business website design</li>
+      <li>Mobile responsive layout</li>
+      <li>Contact form setup</li>
+      <li>WhatsApp button integration</li>
+      <li>Domain & hosting guidance</li>
+      <li>Basic SEO setup</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">What We <span>Provide</span></h2>
+  <p class="section-subtitle">
+    Hum small business, consultant, service provider aur local shop ke liye clean, fast aur professional website banane me madad karte hain.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Business Website</h3>
+      <p>Home, About, Services aur Contact page ke saath complete professional website.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Mobile Friendly</h3>
+      <p>Website mobile, tablet aur desktop sabhi screen par proper dikhegi.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📝</div>
+      <h3>Online Form</h3>
+      <p>Customer inquiry, service request ya document collection ke liye form setup.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💬</div>
+      <h3>WhatsApp Connect</h3>
+      <p>Direct WhatsApp chat button jisse customer turant contact kar sake.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌐</div>
+      <h3>Domain & Hosting</h3>
+      <p>Domain, hosting, SSL aur website live karne me complete guidance.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚀</div>
+      <h3>Fast Loading</h3>
+      <p>Clean code aur lightweight design jisse website jaldi open ho.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <h2 class="section-title">Website <span>Package</span></h2>
+
+  <div class="price-box">
+    <h2>Starter Business Website</h2>
+    <div class="price">₹2,999*</div>
+    <p>
+      Basic business website ke liye best package. Final price pages, content aur features ke hisaab se change ho sakta hai.
+    </p>
+
+    <div class="price-list">
+      <div>✔ Home Page</div>
+      <div>✔ Services Page</div>
+      <div>✔ About Page</div>
+      <div>✔ Contact Page</div>
+      <div>✔ WhatsApp Button</div>
+      <div>✔ Mobile Responsive</div>
+      <div>✔ Basic SEO</div>
+      <div>✔ Hosting Upload Support</div>
+    </div>
+
+    <a href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service" class="btn-primary">Book Website Service</a>
+    <h2 style="margin-top:20px;">Pay ₹1 for Booking Appointment</h2>
+    <form>
+      <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Si64O8ZRIkdMyK" async></script>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>TrustEdge Infotech Providing Websites for Personal Business</h2>
+  <p>Professional website ke liye abhi contact karein.</p>
+  <a href="tel:+917563062376">Call Now: +91 7563062376</a>
+</section>
+
+ <footer class="footer">
+  <p>Samastipur, Bihar | Call: +91 7563062376</p>
+  <div class="footer-links">
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="refund.html">Refund</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <p>© 2026 TrustEdge Infotech | All Rights Reserved</p>
+</footer>
+
+<a class="floating-whatsapp" href="https://wa.me/917563062376?text=Hello%20I%20want%20Website%20Development%20Service">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+</body>
+</html>

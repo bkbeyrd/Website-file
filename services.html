@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  font-family:Arial, sans-serif;
+  background:#0f3358;
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#0f2d52;
+  padding:12px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:3px solid #ffc107;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+  padding:1px;
+  background:linear-gradient(45deg, #0D2B4D, #1E73E8);
+}
+
+.logo-text h2{
+  font-size:18px;
+}
+
+.logo-text p{
+  font-size:11px;
+  color:#ccc;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+}
+
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:#ffc107;
+}
+
+/* SERVICES */
+.services-section{
+  text-align:center;
+  background:#0f3358;
+  padding:40px 20px;
+}
+
+.services-section h2{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.underline{
+  width:80px;
+  height:4px;
+  background:#ffc107;
+  margin:0 auto 30px;
+  border-radius:10px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.service-card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:0.3s;
+  text-decoration:none;
+  display:block;
+}
+
+.service-card:hover{
+  transform:translateY(-5px);
+}
+
+.service-card img{
+  width:50px;
+  margin-bottom:10px;
+}
+
+.service-card h3{
+  margin:10px 0;
+  font-size:16px;
+  color:#0f2d52;
+}
+
+.service-card p{
+  font-size:13px;
+  color:#555;
+}
+
+/* FOOTER */
+.footer{
+  flex: 1;
+  background:#0b2340;
+  color:white;
+  text-align:center;
+  padding:20px 10px;
+}
+
+.footer p{
+  margin:6px 0;
+  font-size:14px;
+}
+
+.footer-links{
+  margin:10px 0;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.footer-links a{
+  color:#ffc107;
+  text-decoration:none;
+  font-size:14px;
+  white-space:nowrap;
+}
+
+.footer-links a:hover{
+  text-decoration:underline;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .navbar{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+  }
+
+  .services-section{
+    padding:35px 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="photos/trustedge.png" alt="Logo">
+
+    <div class="logo-text">
+      <h2>TrustEdge Infotech</h2>
+      <p>Your Trusted Business Partner</p>
+    </div>
+  </div>
+
+  <nav class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="services-section">
+  <h2>OUR SERVICES</h2>
+  <div class="underline"></div>
+
+  <div class="services-grid">
+
+    <a href="website-service.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png">
+      <h3>Website Development</h3>
+      <p>Professional Business website, and custom design service.</p>
+    </a>
+
+    <a href="gst-registration.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+      <h3>GST Registration</h3>
+      <p>Make New GST for Proprietorship, Partnership, Private Ltd and more</p>
+    </a>
+
+    <a href="gst-return.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png">
+      <h3>GST Return Filing</h3>
+      <p>Monthly, quarterly aur yearly GST return filing service.</p>
+    </a>
+
+    <a href="msme-registration.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+      <h3>MSME / Udyam Registration</h3>
+      <p>Udyam Aadhaar / MSME registration to make your business formal.</p>
+    </a>
+
+    <a href="income-tax.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png">
+      <h3>Income Tax Return</h3>
+      <p>Individuals ITR filing service for firm aur company.</p>
+    </a>
+
+    <a href="fssai.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+      <h3>FSSAI Registration</h3>
+      <p>Food business ke liye FSSAI license aur registration support.</p>
+    </a>
+
+    <a href="pan-card.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+      <h3>PAN Card Service</h3>
+      <p>Naya PAN apply, correction and update Services</p>
+    </a>
+
+    <a href="aadhaar.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+      <h3>Aadhaar Services</h3>
+      <p>Aadhaar update, sudhar aur related services.</p>
+    </a>
+
+    <a href="online-form.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
+      <h3>Online Form Filling</h3>
+      <p>Sabhi sarkari aur private forms bharne ki service.</p>
+    </a>
+
+    <a href="business-registration.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png">
+      <h3>Business Registration</h3>
+      <p>Firm, LLP, company registration me complete support.</p>
+    </a>
+
+    <a href="passport-service.html" class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png">
+      <h3>Passport Service</h3>
+      <p>Passport apply aur appointment process me help.</p>
+    </a>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Samastipur, Patna, Bihar | Call: +91 7563062376</p>
+
+  <div class="footer-links">
+    <a href="terms.html">Terms & Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="refund.html">Refund Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <p>© 2026 TrustEdge Infotech | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

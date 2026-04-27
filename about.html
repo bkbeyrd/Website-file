@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Tax Solution</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+}
+.navbar{
+  background:#0f2d52;
+  padding:14px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  color:#fff;
+  font-size:26px;
+  font-weight:800;
+  margin:0;
+  line-height:1.1;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:#ffc107;
+}
+
+.page-title{
+  background:#0f2d52;
+  color:white;
+  text-align:center;
+  padding:35px 15px;
+}
+
+.page-title h1{
+  margin:0;
+  font-size:34px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .navbar{
+    padding:12px 15px;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .logo{
+    font-size:24px;
+    text-align:center;
+  }
+
+  .nav-links{
+    gap:16px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .nav-links a{
+    font-size:14px;
+  }
+
+  .page-title{
+    padding:25px 10px;
+  }
+
+  .page-title h1{
+    font-size:28px;
+  }
+}
+
+/* Header */
+.header {
+    background: #0f2d52;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Section */
+.about-section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Title */
+.about-section h1 {
+    text-align: center;
+    color: #0f2d52;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background: #ffc107;
+    margin: 10px auto 30px;
+    border-radius: 10px;
+}
+
+/* Content */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-text h2 {
+    color: #0f2d52;
+}
+
+/* Image */
+.about-img img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Features */
+.features {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.feature-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feature-box h3 {
+    color: #0f2d52;
+}
+
+/* Footer */
+.footer {
+    background: #0f2d52;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+  <div class="navbar">
+  <h2 class="logo">Tax Solution</h2>
+
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<div class="page-title">
+  <h1>Tax Solution</h1>
+</div>
+
+<section class="about-section">
+
+    <h1>About Us</h1>
+    <div class="underline"></div>
+
+    <div class="about-content">
+
+        <!-- Text -->
+        <div class="about-text">
+            <h2>Your Trusted Business Partner</h2>
+            <p>
+                Tax Solution ek professional service provider hai jo GST Registration,
+                GST Return Filing, Income Tax, PAN, Aadhaar, FSSAI, MSME aur
+                Business Registration jaise services provide karta hai.
+            </p>
+
+            <p>
+                Hamara goal hai ki har client ko fast, secure aur affordable service mile.
+                Hum aapke documents ko safe rakhte hain aur har process ko simple banate hain.
+            </p>
+
+            <p>
+                Chahe aap ek chhota business start kar rahe ho ya existing business
+                ko grow karna chahte ho — hum har step par aapki madad karte hain.
+            </p>
+        </div>
+
+        <!-- Image -->
+        <div class="about-img">
+           <img src="photos/aboutpic.png" alt="About Image">
+        </div>
+
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+
+        <div class="feature-box">
+            <h3>⚡ Fast Service</h3>
+            <p>Kaam jaldi aur sahi tarike se complete.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>🔒 Secure</h3>
+            <p>Aapke documents safe aur confidential rahenge.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>👨‍💼 Expert Support</h3>
+            <p>Har step par professional guidance milega.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>💰 Affordable Fees</h3>
+            <p>Kam cost me best service.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="footer">
+    <p>© 2026 Tax Solution | All Rights Reserved</p>
+</div>
+
+</body>
+</html>

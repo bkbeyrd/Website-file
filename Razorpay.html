@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - TrustEdge Infotech</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#f4f7fb;
+    }
+
+    .container{
+      background:#fff;
+      padding:30px 20px;
+      width:100%;
+      max-width:420px;
+      border-radius:16px;
+      text-align:center;
+      box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    h1{
+      color:#0f2d52;
+      margin-bottom:10px;
+      font-size:24px;
+    }
+
+    p{
+      color:#555;
+      font-size:14px;
+      margin-bottom:20px;
+    }
+
+    .amount{
+      font-size:22px;
+      font-weight:bold;
+      color:#0f2d52;
+      background:#eef5ff;
+      padding:12px;
+      border-radius:10px;
+      margin-bottom:25px;
+    }
+
+    /* Razorpay button ko center karne ke liye */
+    .razorpay-payment-button{
+      width:100% !important;
+      padding:14px !important;
+      font-size:16px !important;
+      border-radius:10px !important;
+      background:#0f2d52 !important;
+      color:#fff !important;
+      border:none !important;
+      cursor:pointer;
+    }
+
+    .razorpay-payment-button:hover{
+      background:#1e73e8 !important;
+    }
+
+    .note{
+      margin-top:15px;
+      font-size:12px;
+      color:#777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>TrustEdge Infotech</h1>
+    <p>Website Development / Digital Service Payment</p>
+
+    <div class="amount">₹500</div>
+
+    <!-- Razorpay Payment Button -->
+    <form>
+      <script 
+        src="https://checkout.razorpay.com/v1/payment-button.js"
+        data-payment_button_id="pl_Si64O8ZRIkdMyK"
+        async>
+      </script>
+    </form>
+
+    <div class="note">
+      Secure Payment via Razorpay
+    </div>
+  </div>
+
+</body>
+</html>
